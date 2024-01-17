@@ -1,6 +1,6 @@
 <?php
 
-define("HOSTNAME", "localhost");
+define("HOSTNAME", "localhost:3307");
 define("USERNAME", "root");
 define("PASSWORD", "");
 define("DATABASE", "crud_op");
