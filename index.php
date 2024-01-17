@@ -19,6 +19,8 @@
     <th>Name</th>
     <th>Location</th>
     <th>Contact</th>
+    <th>Update</th>
+    <th>Delete</th>
 
 </tr>        </thead>
         <tbody>
@@ -40,6 +42,8 @@
     <td> <?php echo $row['Name'];?> </td>
     <td> <?php echo $row['Location'];?> </td>
     <td> <?php echo $row['Contact'];?> </td>
+    <td> <a href="update.php?id=<?php echo $row['ID'];?>" class="btn btn-success">Update</a></td>
+    <td> <a href="delete.php?id=<?php echo $row['ID'];?>" class="btn btn-danger">Delete</a> </td>
 </tr>
                 <?php
                }
