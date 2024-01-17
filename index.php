@@ -54,6 +54,14 @@
     }
     
     ?>
+
+<?php 
+    if(isset($_GET['insert_msg'])){
+        echo "<h6>".$_GET['insert_msg']."</h6>";
+    }
+    
+    ?> 
+
     <form action="insert_data.php" method="post">
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -65,10 +73,6 @@
         </button>
       </div>
       <div class="modal-body">
-<div class="form-group">
-    <label for="id">ID</label>
-    <input type="text" name="id" class="form-control">
-</div>
 <div class="form-group">
     <label for="name">Name</label>
     <input type="text" name="name" class="form-control">
