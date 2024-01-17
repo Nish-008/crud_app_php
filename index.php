@@ -1,5 +1,5 @@
 <?php include('header.php');?>
-
+<?php include('dbcon.php');?>
 <h2> ALL STUDENTS </h2>
    <table class="table table-hover table-bordered table striped">
         <thead>
@@ -11,19 +11,30 @@
 
 </tr>        </thead>
         <tbody>
-<tr>
-    <td>1</td>
-    <td>Suzana</td>
-    <td>Khilgaon</td>
-    <td>0188776655</td>
-</tr>
-<tr>
-    <td>3</td>
-    <td>Tamanna</td>
-    <td>Mirpur</td>
-    <td>018879995</td>
-</tr>
+            <?php 
+            
+            $query = "select * from `students`";
 
+            $result = mysqli_query($connection,$query);
+
+            if(!$result){
+                die("query Failed".mysqli_error());
+            }
+
+            else {
+               while($row = mysqli_fetch_assoc($result)){
+                ?>
+                <tr>
+    <td> <?php echo $row['ID'];?> </td>
+    <td> <?php echo $row['Name'];?> </td>
+    <td> <?php echo $row['Location'];?> </td>
+    <td> <?php echo $row['Contact'];?> </td>
+</tr>
+                <?php
+               }
+            }
+
+            ?>
         </tbody>
     </table>
     <?php include('footer.php');?>
