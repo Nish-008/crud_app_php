@@ -48,7 +48,7 @@
             ?>
         </tbody>
     </table>
-    <form>
+    <form action="insert_data.php" method="post">
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -78,7 +78,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">ADD</button>
+        <input type="submit" class="btn btn-success" name="add_student" value="ADD">
       </div>
     </div>
   </div>
