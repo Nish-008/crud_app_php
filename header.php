@@ -13,7 +13,7 @@
         <p> PHP CRUDE APP </p>
     </div>
     <div class="right-links">
-        <a href="#">Change Profile</a>
+        <a href="edit.php">Edit Profile</a>
         <a href="logout.php"> 
             <button class="btn btn-danger ">Log Out</button>
         </a>
