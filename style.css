@@ -21,6 +21,8 @@ h6{
 text-align: center;
 color: red;
 }
+
+/* for index page */
 .index-page *{
     padding: 0;
     margin: 0;
@@ -95,4 +97,110 @@ color: red;
 }
 .index-page .link{
     margin-bottom: 15px;
+}
+.register-page *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+}
+.register-page body {
+    background: #e4e9f7;
+}
+.register-page .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+.register-page .box{
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+
+}
+
+.register-page .form-box{
+    width:  450px;
+    margin: 0px 10px;
+}
+
+.register-page .form-box header{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 10px;
+}
+.register-page .form-box form .field{
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.register-page .form-box form .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.register-page .btn{
+    height: 35px;
+    background: rgba(76,68,182,0.808);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+.register-page .btn:hover{
+    opacity: 0.82;
+}
+.register-page .submit{
+    width: 100%;
+}
+.register-page .link{
+    margin-bottom: 15px;
+}
+
+/* for header - navbar*/
+.header-page .nav{
+    background:#a2d8f3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 60px;
+    z-index: 100;
+}
+
+.header-page .logo{
+    font-size: 25px;
+    font-weight: 900;
+    margin-right: auto;
+}
+
+.header-page .right-links a{
+ padding: 0 10px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+}
+body {
+    background: #e4e9f7;
 }

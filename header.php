@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="header-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,5 +8,17 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="main_title">CRUD APP PHP</h1>
+<div class="nav">
+    <div class="logo">
+        <p> PHP CRUDE APP </p>
+    </div>
+    <div class="right-links">
+        <a href="#">Change Profile</a>
+        <a href="logout.php"> 
+            <button class="btn btn-danger ">Log Out</button>
+        </a>
+    </div>
+</div>
+    <!-- <h1 id="main_title">CRUD APP PHP</h1> -->
     <div class="container">
+       
