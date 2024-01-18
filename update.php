@@ -40,7 +40,7 @@ if(isset($_POST['update_student'])){
         die("query Failed".mysqli_error($connection));
     }
     else{
-        header('location:index.php?update_msg=You have updated the info successfully!');
+        header('location:home.php?update_msg=You have updated the info successfully!');
     }
 }
 

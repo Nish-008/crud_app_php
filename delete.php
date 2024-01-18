@@ -12,6 +12,6 @@ if(!$result){
     die("query Failed".mysqli_error($connection));
 }
 else{
-    header('location:index.php?delete_msg=You have deleted the record successfully!');
+    header('location:home.php?delete_msg=You have deleted the record successfully!');
 }
 ?>
