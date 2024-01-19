@@ -1,9 +1,4 @@
 <?php include('dbcon.php');?>
-<?php 
-
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="en" class="index-page">
 <head>
@@ -15,34 +10,33 @@ session_start();
 <body>
     <div class="container">
         <div class="box form-box">
-            <?php
-            
-            if(isset($_POST['submit'])){
-                $email = mysqli_real_escape_string($connection,$_POST['email']);
-                $password = mysqli_real_escape_string($connection,$_POST['password']);
-           
-                $result = mysqli_query($connection,"SELECT * FROM users WHERE Email= '$email' AND Password='$password'") or die("Error");
-                $row = mysqli_fetch_assoc($result);
+        <?php
+session_start();
 
-                if (is_array($row) && !empty($row)) {
-                    $_SESSION['valid'] = 'true';
-                    $_SESSION['username'] = $row['Username'];
-                    $_SESSION['f_name'] = $row['Fullname'];
-                    $_SESSION['id'] = $row['ID'];
-                } else {
-                    echo "<div class='message'>
-                            <p>Wrong username or password</p>
-                          </div><br>";
-                    echo "<a href='index.php'><button class='btn'>Go Back</button></a>";
-                }
-                if (isset($_SESSION['valid'])) {
-                    header('location: home.php');
-                }                
-           
-            } else{
-            
-            
-            ?>
+if (isset($_POST['submit'])) {
+    $email = mysqli_real_escape_string($connection, $_POST['email']);
+    $password = mysqli_real_escape_string($connection, $_POST['password']);
+
+    $result = mysqli_query($connection, "SELECT * FROM users WHERE Email= '$email' AND Password='$password'") or die("Error");
+    $row = mysqli_fetch_assoc($result);
+
+    if (is_array($row) && !empty($row)) {
+        $_SESSION['valid'] = $row['Email'];
+        $_SESSION['username'] = $row['Username'];
+        $_SESSION['f_name'] = $row['Fullname'];
+        $_SESSION['id'] = $row['ID'];
+
+        header('location: home.php');
+        exit; // Ensure the script stops execution after the header redirection
+    } else {
+        echo "<div class='message'>
+                <p>Wrong username or password</p>
+              </div><br>";
+        echo "<a href='index.php'><button class='btn'>Go Back</button></a>";
+    }
+} else{
+
+?>
 <header>Login </header>
 <form action="" method="post">
     <div class="field input">
