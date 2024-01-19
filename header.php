@@ -1,3 +1,13 @@
+<?php include('dbcon.php');?>
+<?php
+session_start();
+
+if (!isset($_SESSION['valid'])) {
+    header('location: index.php');
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en" class="header-page">
 <head>
@@ -30,7 +40,22 @@
         <p> <a href="home.php">PHP CRUDE APP</a></p>
     </div>
     <div class="right-links">
-        <a href="edit.php">Edit Profile</a>
+        <?php 
+        
+        $id = $_SESSION['id'];
+        $query = mysqli_query($connection,"SELECT * FROM users WHERE ID='$id'");
+
+        while($result = mysqli_fetch_assoc($query)){
+            $res_uname = $result['Username'];
+            $res_email = $result['Email'];
+            $res_fname = $result['Fullname'];
+            $res_id = $result['ID'];
+        }
+        
+        echo "<a href='edit.php?ID=$res_id'>Edit Profile</a>";
+
+        ?>
+    
         <a href="logout.php"> 
             <button class="btn btn-danger ">Log Out</button>
         </a>

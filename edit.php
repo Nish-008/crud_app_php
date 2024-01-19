@@ -1,5 +1,4 @@
 <?php include('header.php');?>
-<?php include('dbcon.php');?>
 <!DOCTYPE html>
 <html lang="en" class="edit-page">
 <head>
