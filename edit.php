@@ -80,30 +80,68 @@ body {
 .submit{
     width: 100%;
 }
+
+.message{
+    text-align: center;
+    background: #f9eded;
+    padding: 15px 0px;
+    border: 1px solid #696969;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: green;
+}
 </style>
 </head>
 <body>
 <div class="container">
         <div class="box form-box">
+            <?php 
+            
+            if(isset($_POST['submit'])){
+                $username = $_POST['username'];
+                $email = $_POST['email'];
+                $f_name = $_POST['f_name'];
+                
+                $id = $_SESSION['id'];
+
+                $edit_query = mysqli_query($connection,"UPDATE users SET Username='$username', Email='$email',Fullname='$f_name'WHERE ID='$id'") or die("error occured");
+            if($edit_query){
+                echo "<div class='message'>
+                <p>Profile Updated!</p>
+            </div><br>";
+            echo "<a href='home.php'><button class='btn'>Go To Homepage</button></a>";
+        
+            }
+            } else{
+
+                $id = $_SESSION['id'];
+                $query = mysqli_query($connection,"SELECT * FROM users WHERE ID='$id'");
+              while($result=mysqli_fetch_assoc($query)){
+                $res_uname = $result['Username'];
+                $res_email = $result['Email'];
+                $res_fname = $result['Fullname'];
+              }
+            ?>
 <header>Edit Profile Info</header>
 <form action="" method="post">
     <div class="field input">
         <label for="username">Username</label>
-        <input type="text" name="username" id="username" autocomplete="off" required>
+        <input type="text" name="username" id="username" value="<?php echo $res_uname; ?>" autocomplete="off" required>
     </div>
     <div class="field input">
         <label for="username">Email</label>
-        <input type="text" name="email" id="email" autocomplete="off" required>
+        <input type="text" name="email" id="email" value="<?php echo $res_email; ?>" autocomplete="off" required>
     </div>
     <div class="field input">
         <label for="username">Full Name</label>
-        <input type="text" name="f_name" id="f_name" autocomplete="off" required>
+        <input type="text" name="f_name" id="f_name" value="<?php echo $res_fname; ?>" autocomplete="off" required>
     </div>
     <div class="field">
         <input type="submit" class="btn" name="submit" value="UPDATE" required>
     </div>
 </form>
         </div>
+        <?php } ?>
     </div>
 </body>
 </html>
