@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile</title>
     <style>
-  *{
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 
 }
- body {
+body {
     background: #e4e9f7;
 }
 .container {
@@ -25,7 +25,7 @@
     margin-top: 20px;
 }
 
- .box{
+.box{
     background: #fdfdfd;
     display: flex;
     flex-direction: column;
@@ -36,12 +36,12 @@
 
 }
 
- .form-box{
+.form-box{
     width:  450px;
     margin: 0px 10px;
 }
 
- .form-box header{
+.form-box header{
     font-size: 25px;
     font-weight: 600;
     padding-bottom: 10px;
@@ -54,7 +54,7 @@
     flex-direction: column;
 }
 
- .form-box form .input input{
+.form-box form .input input{
     height: 40px;
     width: 100%;
     font-size: 16px;
@@ -63,7 +63,7 @@
     border: 1px solid #ccc;
     outline: none;
 }
- .btn{
+.btn{
     height: 35px;
     background: rgba(76,68,182,0.808);
     border: 0;
@@ -75,10 +75,10 @@
     margin-top: 10px;
     padding: 0px 10px;
 }
- .btn:hover{
+.btn:hover{
     opacity: 0.82;
 }
- .submit{
+.submit{
     width: 100%;
 }
 </style>
