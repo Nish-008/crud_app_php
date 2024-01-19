@@ -1,5 +1,13 @@
 <?php include('header.php');?>
 <?php include('dbcon.php');?>
+<?php
+session_start();
+
+if (!isset($_SESSION['valid'])) {
+    header('location: index.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

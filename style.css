@@ -175,6 +175,16 @@ color: red;
     margin-bottom: 15px;
 }
 
+/* .register-page .message{
+    text-align: center;
+    background: #f9eded;
+    padding: 15px 0px;
+    border: 1px solid #696969;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: red;
+} */
+
 /* for header*/
 .header-page .nav{
     background:#a2d8f3;
@@ -185,7 +195,7 @@ color: red;
     z-index: 100;
 }
 
-.header-page .logo{
+/* .header-page .logo{
     font-size: 25px;
     font-weight: 900;
     text-decoration: none;
@@ -194,7 +204,7 @@ color: red;
 .header-page .logo a{
     text-decoration: none;
     color: black;
-}
+} */
 .header-page .right-links a{
  padding: 0 10px;
 }

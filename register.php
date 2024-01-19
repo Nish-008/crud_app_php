@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .register-page .message{
+    text-align: center;
+    background: #f9eded;
+    padding: 15px 0px;
+    border: 1px solid #696969;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: red;
+}
+    </style>
 </head>
 <body>
     <div class="container">
