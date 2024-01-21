@@ -61,6 +61,5 @@ if (!isset($_SESSION['valid'])) {
         </a>
     </div>
 </div>
-    <!-- <h1 id="main_title">CRUD APP PHP</h1> -->
     <div class="container">
        
